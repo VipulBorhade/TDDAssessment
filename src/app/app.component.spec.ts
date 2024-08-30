@@ -64,5 +64,12 @@ describe('AppComponent', () => {
     expect(app.add(num)).toEqual(14);
   });
 
+  it('should return sum for delimiter in  given in this //[delimiter]\n[numbers…]" ', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const num:string = "//;\n2;2;7;3"
+    expect(app.add(num)).toEqual(14);
+  });
+
 
 });
