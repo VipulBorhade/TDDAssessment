@@ -38,4 +38,10 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.add('')).toEqual(0);
   });
+  it('should return same number if input contains only numbers', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const num:string = "2"
+    expect(app.add(num)).toEqual(2);
+  });
 });
