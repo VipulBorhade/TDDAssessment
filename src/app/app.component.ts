@@ -15,7 +15,8 @@ export class AppComponent {
       return parseInt(numbers);
     }
     else{
-      return 0;
+      let a=numbers.split(",");
+      return parseInt(a[0])+parseInt(a[1])
     }
    
   }
