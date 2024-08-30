@@ -29,12 +29,20 @@ export class AppComponent {
       console.log(delimiter)
       let a=numbers.split(delimiter);
       console.log(numbers)
+      const negatives: number[] = [];
       let sum = 0;
       for(let i=0;i<a.length;i++){
         const num = parseInt(a[i],10);
         if (!isNaN(num)) {
+          if (num < 0) {
+            negatives.push(num);
+          } else {
             sum += num;
           }
+          }
+        }
+        if (negatives.length > 0) {
+          throw new Error("negative numbers not allowed " + negatives.join(","));
         }
       return sum
     }
