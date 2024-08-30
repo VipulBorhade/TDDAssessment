@@ -50,4 +50,11 @@ describe('AppComponent', () => {
     const num:string = "2,2"
     expect(app.add(num)).toEqual(4);
   });
+  it('should return sum for comma separated multiple numbers', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const num:string = "2,2,7,3"
+    expect(app.add(num)).toEqual(14);
+  });
+
 });

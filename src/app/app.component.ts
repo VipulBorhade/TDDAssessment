@@ -16,7 +16,11 @@ export class AppComponent {
     }
     else{
       let a=numbers.split(",");
-      return parseInt(a[0])+parseInt(a[1])
+      let sum = 0;
+      for(let i=0;i<a.length;i++){
+        sum = sum + parseInt(a[i]);
+      }
+      return sum
     }
    
   }
