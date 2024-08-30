@@ -11,7 +11,12 @@ export class AppComponent {
     if(numbers.length == 0 ){
       return 0;
     }
-    return 0;
+    else if(numbers.split(",").length == 1){
+      return parseInt(numbers);
+    }
+    else{
+      return 0;
+    }
    
   }
 }
