@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TDDkata';
-  add(numbers:string) {
+  add(numbers:string) :number {
+    if(numbers.length == 0 ){
+      return 0;
+    }
+    return 0;
+   
   }
 }
