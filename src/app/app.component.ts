@@ -8,14 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'TDDkata';
   add(numbers:string) :number {
+    let delimiter = /[\n,]/
     if(numbers.length == 0 ){
       return 0;
     }
-    else if(numbers.split(",").length == 1){
-      return parseInt(numbers);
-    }
     else{
-      let a=numbers.split(",");
+      let a=numbers.split(delimiter);
+      console.log(numbers)
       let sum = 0;
       for(let i=0;i<a.length;i++){
         sum = sum + parseInt(a[i]);

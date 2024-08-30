@@ -57,4 +57,12 @@ describe('AppComponent', () => {
     expect(app.add(num)).toEqual(14);
   });
 
+  it('should return sum for comma and newline separated multiple numbers', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const num:string = "2,2\n7,3"
+    expect(app.add(num)).toEqual(14);
+  });
+
+
 });
